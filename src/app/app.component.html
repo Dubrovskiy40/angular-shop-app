@@ -15,10 +15,13 @@
       <li nz-submenu nzOpen nzTitle="Shop" nzIcon="shop">
         <ul>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/welcome">Welcome</a>
+            <a routerLink="/allProducts">All Products</a>
           </li>
           <li nz-menu-item nzMatchRouter>
-            <a routerLink="/login">Login</a>
+            <a routerLink="/allProducts/electronics">Electronics</a>
+          </li>
+          <li nz-menu-item nzMatchRouter>
+            <a routerLink="/allProducts/fashion">Fashion</a>
           </li>
         </ul>
       </li>
@@ -35,13 +38,14 @@
     <nz-header>
       <div class="app-header">
         <span class="header-trigger" (click)="isCollapsed = !isCollapsed">
-            <span class="trigger"
-               nz-icon
-               [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+            <span
+              class="trigger"
+              nz-icon
+              [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
             ></span>
         </span>
         <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
-          <input type="text" nz-input placeholder="input search text" />
+          <input type="text" nz-input placeholder="input search text"/>
         </nz-input-group>
         <ng-template #suffixIconButton>
           <button nz-button nzType="primary" nzSearch><span nz-icon nzType="search"></span></button>
